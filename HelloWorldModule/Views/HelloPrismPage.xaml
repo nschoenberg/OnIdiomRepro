@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:HelloWorldModule.Views"
+             x:Class="HelloWorldModule.Views.HelloPrismPage"
+             Title="HelloPrismPage">
+    <ContentPage.Resources>
+        <OnIdiom x:Key="SampleColor" x:TypeArguments="Color" Default="Red" Phone="Green" />
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI! Stunning."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            BackgroundColor="{StaticResource SampleColor}"/>
+        <views:TestContent />
+   
+    </VerticalStackLayout>
+</ContentPage>

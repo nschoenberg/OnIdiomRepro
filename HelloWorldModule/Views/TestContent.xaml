@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorldModule.Views.TestContent">
+    <Grid>
+        <Grid.Resources>
+            <OnIdiom x:Key="LayoutGridColumnWidth" x:TypeArguments="GridLength" Default="0.25*" Phone="0.33*" />
+            <OnIdiom x:Key="ThirdGridColumnWidth" x:TypeArguments="GridLength" Default="0.5*" Phone="0.33*" />
+            <OnIdiom x:Key="CountryButtonColSpan" x:TypeArguments="x:Int32" Default="1" Phone="3" />
+            <OnIdiom x:Key="ZipCodeRow" x:TypeArguments="x:Int32" Default="1" Phone="2" />
+            <OnIdiom x:Key="ZipCodeColumn" x:TypeArguments="x:Int32" Default="1" Phone="0" />
+            <OnIdiom x:Key="LocationColSpan" x:TypeArguments="x:Int32" Default="1" Phone="2" />
+            <OnIdiom x:Key="LocationRow" x:TypeArguments="x:Int32" Default="1" Phone="2" />
+            <OnIdiom x:Key="LocationCol" x:TypeArguments="x:Int32" Default="2" Phone="1" />
+            <OnIdiom x:Key="AdditionalInfoRow" x:TypeArguments="x:Int32" Default="2" Phone="3" />
+            <OnIdiom x:Key="AdditionalInfoColSpan" x:TypeArguments="x:Int32" Default="2" Phone="3" />
+            <OnIdiom x:Key="AdditionalInfoTwoRow" x:TypeArguments="x:Int32" Default="2" Phone="4" />
+            <OnIdiom x:Key="AdditionalInfoTwoColumn" x:TypeArguments="x:Int32" Default="2" Phone="0" />
+            <OnIdiom x:Key="AdditionalInfoTwoColSpan" x:TypeArguments="x:Int32" Default="1" Phone="3" />
+            <OnIdiom x:Key="HideRowGridLength" x:TypeArguments="GridLength" Default="0" Phone="86" />
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="86" />
+            <RowDefinition Height="86" />
+            <RowDefinition Height="86" />
+            <RowDefinition Height="{StaticResource HideRowGridLength}" />
+            <RowDefinition Height="{StaticResource HideRowGridLength}" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{StaticResource LayoutGridColumnWidth}" />
+            <ColumnDefinition Width="{StaticResource LayoutGridColumnWidth}" />
+            <ColumnDefinition Width="{StaticResource ThirdGridColumnWidth}" />
+        </Grid.ColumnDefinitions>
+
+        <Label BackgroundColor="Blue">Swag</Label>
+    </Grid>
+</ContentView>
